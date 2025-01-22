@@ -1,5 +1,5 @@
 import java.util.*;
-public class calculator {
+public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -40,6 +40,7 @@ public class calculator {
                 result = num1 * num2;
                 break;
             case '/':
+                // Check for division by zero
                 if (num2 == 0) {
                     System.out.println("Error: Division by zero");
                     return Double.NaN;
@@ -48,6 +49,7 @@ public class calculator {
                 }
                 break;
             default:
+                // Invalid operator
                 System.out.println("Error: Invalid operator");
                 return Double.NaN;
         }
