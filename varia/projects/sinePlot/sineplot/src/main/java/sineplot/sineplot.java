@@ -1,4 +1,4 @@
-package varia.sinePlot_proj.sineplot.src.main.java.sineplot;
+package sineplot;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
