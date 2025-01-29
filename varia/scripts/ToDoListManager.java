@@ -1,3 +1,4 @@
+package varia.scripts;
 import java.util.Scanner;
 import java.util.ArrayList;
 
