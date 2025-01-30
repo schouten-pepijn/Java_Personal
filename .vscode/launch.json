@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "mortgage_calculator",
+            "request": "launch",
+            "mainClass": "mortgage_calculator",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "user_input",
+            "request": "launch",
+            "mainClass": "user_input",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "variables",
+            "request": "launch",
+            "mainClass": "variables",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "print_on_screen",
+            "request": "launch",
+            "mainClass": "print_on_screen",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-CrudApiApplication<crud-api>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
