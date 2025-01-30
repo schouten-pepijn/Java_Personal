@@ -2,6 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Loops",
+            "request": "launch",
+            "mainClass": "Loops",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "FizzBuzz",
+            "request": "launch",
+            "mainClass": "FizzBuzz",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "calculator",
+            "request": "launch",
+            "mainClass": "varia.scripts.calculator",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ConditionalStatements",
+            "request": "launch",
+            "mainClass": "ConditionalStatements",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "conditionalStatements",
+            "request": "launch",
+            "mainClass": "conditionalStatements",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "mortgage_calculator",
             "request": "launch",
             "mainClass": "mortgage_calculator",

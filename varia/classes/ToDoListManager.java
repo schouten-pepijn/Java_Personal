@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 // Class to manage a to-do list
-public class ToDoListManager {
+public class toDoListManager {
     public static void main(String[] args) {
         // Create a scanner for user input
         Scanner scanner = new Scanner(System.in);

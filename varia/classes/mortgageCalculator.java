@@ -2,7 +2,7 @@
 import java.util.Scanner;
 import java.text.NumberFormat;
 
-public class mortgage_calculator {
+public class mortgageCalculator {
     public static void main(String[] args) {
 
         // Instanciate global variables and scanner object
