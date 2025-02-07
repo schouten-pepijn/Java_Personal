@@ -1,0 +1,15 @@
+public class TaxReport {
+    // Interface
+    private TaxCalculator calculator;
+
+    // Constructor injection
+    public TaxReport(TaxCalculator calculator) {
+        this.calculator = calculator;
+    }
+
+    public void show() {
+        // Dependency (tightly coupled)
+        var tax = calculator.calculateTax();
+        System.out.println("Tax: " + tax);
+    }
+}

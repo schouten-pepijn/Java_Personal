@@ -16,15 +16,20 @@ public class Loops {
         String input = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter quit to exit");
-
-        while (!input.equals("quit")) {
+        while (true) {
             System.out.print("Input: ");
             input = scanner.next().toLowerCase();
-
+            // check if input is pass
+            if (input.equals("pass"))
+                continue;
+            // check if input is quit
             if (input.equals("quit"))
                 break;
             System.out.println(input);
         }
+
+        // close scanner
+        scanner.close();
 
         // do while loop (excecute first)
         int j = 0;
@@ -32,6 +37,11 @@ public class Loops {
             System.out.println("Hello, world!");
             j++;
         } while (j < 5);
-        
+
+
+        // for each loop
+        String[] fruits = {"apple", "banana", "orange"};
+        for (String fruit : fruits)
+            System.out.println(fruit);
     }
 }

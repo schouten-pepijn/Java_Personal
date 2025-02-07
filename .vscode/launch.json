@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MortgageCalcErrorHandling",
+            "request": "launch",
+            "mainClass": "MortgageCalcErrorHandling",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Loops",
             "request": "launch",
             "mainClass": "Loops",
