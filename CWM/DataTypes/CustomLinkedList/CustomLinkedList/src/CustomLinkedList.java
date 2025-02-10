@@ -15,7 +15,7 @@ public class CustomLinkedList {
     // create fields
     private Node first;
     private Node last;
-    private int size = 0;
+    private int size;
 
     // addFirst
     public void addFirst(int item) {
@@ -48,7 +48,7 @@ public class CustomLinkedList {
     }
 
     // deleteFirst
-    public void deleteFirst() {
+    public void removeFirst() {
         // General logic
         // [10 -> 20 -> 30]
         // first -> 20 [20 -> 30]
@@ -56,22 +56,22 @@ public class CustomLinkedList {
         if (isEmpty())
             throw new NoSuchElementException();
         // list with one element
-        if (first == last) {
+        if (first == last) 
             first = last = null;  
-            return;     
+        else {
+            // list with more than one element 
+            var second = first.next;
+            // remove the link
+            first.next = null;
+            // update the first
+            first = second;
         }
-        // list with more than one element 
-        var second = first.next;
-        // remove the link
-        first.next = null;
-        // update the first
-        first = second;
 
         size--;
     }
 
     // deleteLast
-    public void deleteLast() {
+    public void removeLast() {
         // catch for empty list
         if (isEmpty())
             throw new NoSuchElementException();

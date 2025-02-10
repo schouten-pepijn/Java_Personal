@@ -6,11 +6,13 @@ public class Main {
         list.addLast(20);
         list.addLast(30);
 
-        list.deleteFirst();
+        list.removeFirst();
 
         System.out.println(list.indexOf(20));
 
         System.out.println(list.contains(10));
+
+        System.out.println(list.size());
 
     }
 }
