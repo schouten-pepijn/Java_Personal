@@ -112,8 +112,21 @@ public class CustomLinkedList {
 
     }
 
+    // size
     public int size() {
         return size;
+    }
+
+    // convert to array
+    public int[] toArray() {
+        int[] array = new int[size];
+        var current = first;
+        var index = 0;
+        while (current != null) {
+            array[index++] = current.value;
+            current = current.next;
+        }
+        return array;
     }
 
     private boolean isEmpty() {
@@ -131,4 +144,48 @@ public class CustomLinkedList {
         // not found
         return null;
     }
+
+    // reverse the linked list in place
+    public void reverse() {
+        if (isEmpty()) return;
+
+        var previous = first;
+        var current = first.next;
+        while (current != null) {
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = previous;
+    }
+
+
+    public int getKthFromTheEnd(int k) {
+        // if the list is empty
+        if (isEmpty())
+            throw new IllegalStateException();
+
+        var a = first;
+        var b = first;
+        // move first pointer k-1 steps for distance
+        for (int i = 0; i < k - 1; i++) {
+            b = b.next;
+            // if tranverse past the end
+            if (b == null)
+                throw new IllegalArgumentException();
+        }
+        // move both pointers
+        while (b != last) {
+            a = a.next;
+            b = b.next;
+        }
+        // a returns the kth element
+        return a.value;
+    }
 }
+
+
