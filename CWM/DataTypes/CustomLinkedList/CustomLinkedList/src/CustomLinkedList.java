@@ -1,17 +1,7 @@
 import java.util.NoSuchElementException;
 
 public class CustomLinkedList {
-    // private class for a Node
-    private class Node {
-        private int value;
-        private Node next;
-
-        // Custom constructor for node class
-        public Node(int value) {
-            this.value = value;
-        }
-    }
-
+    
     // create fields
     private Node first;
     private Node last;
