@@ -1,7 +1,7 @@
 import java.util.NoSuchElementException;
 
 public class CustomLinkedList {
-    
+
     // create fields
     private Node first;
     private Node last;
@@ -56,7 +56,6 @@ public class CustomLinkedList {
             // update the first
             first = second;
         }
-
         size--;
     }
 
@@ -141,13 +140,19 @@ public class CustomLinkedList {
 
         var previous = first;
         var current = first.next;
+        // transverse the list
         while (current != null) {
+            // save the next
             var next = current.next;
+            // point current to previous
             current.next = previous;
+            // move previous to current
             previous = current;
+            // move current to next
             current = next;
         }
 
+        // update first and last links
         last = first;
         last.next = null;
         first = previous;
