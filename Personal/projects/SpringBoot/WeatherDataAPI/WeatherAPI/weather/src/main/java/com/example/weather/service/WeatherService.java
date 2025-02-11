@@ -23,17 +23,13 @@ public class WeatherService {
     }
 
     public String getRawWeather(String city) {
-        String url = baseUrl
-                .replace("{city}", city)
-                .replace("{key}", apiKey);
+        String url = createUrl(city);
 
         return restTemplate.getForObject(url, String.class);
     }
 
     public WeatherResponse getWeather(String city) {
-        String url = baseUrl
-                .replace("{city}", city)
-                .replace("{key}", apiKey);
+        String url = createUrl(city);
 
         try {
             String response = restTemplate.getForObject(url, String.class);
@@ -60,6 +56,12 @@ public class WeatherService {
                 .getDouble("humidity"));
 
         return new WeatherResponse(city, temperature, windSpeed, humidity);
+    }
 
+    private String createUrl(String city) {
+        String url = baseUrl
+                .replace("{city}", city)
+                .replace("{key}", apiKey);
+        return url;
     }
 }

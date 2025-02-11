@@ -5,7 +5,7 @@ public class Warrior extends Character {
 
     @Override
     public void specialAttack(Character defender) {
-        System.out.println("You are swining your giant hammer.");
+        System.out.println("You are swinging your giant hammer.");
         attack(defender);
     }
 }
