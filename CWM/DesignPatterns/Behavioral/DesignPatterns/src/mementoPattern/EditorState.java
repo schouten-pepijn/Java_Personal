@@ -1,3 +1,5 @@
+package mementoPattern;
+
 public class EditorState {
     // Field to store the content
     private final String content;
