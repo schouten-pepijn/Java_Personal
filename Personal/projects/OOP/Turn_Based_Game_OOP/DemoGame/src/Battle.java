@@ -26,7 +26,7 @@ public class Battle implements Potionable {
     public void randomPotion() {
         if (random.nextFloat() < potionChance) {
             defender.setHealth(defender.getHealth() + potionHeal);
-            System.out.println("%nYou found a health potion!");
+            System.out.println("\nYou found a health potion!");
             System.out.printf("New health: %d!%n", defender.getHealth());
         }
     }

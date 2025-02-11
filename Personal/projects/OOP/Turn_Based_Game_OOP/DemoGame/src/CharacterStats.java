@@ -2,7 +2,7 @@ public enum CharacterStats {
     WARRIOR(
         120, 25, 40,
         6, 30, 30,
-        10
+        20
     ),
     MAGE(
         100, 15, 35,
