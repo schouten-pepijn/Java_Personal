@@ -1,4 +1,4 @@
-package StrategyPattern;
+package strategyPattern;
 
 public class App {
     public static void main(String[] args) {

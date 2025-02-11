@@ -1,4 +1,4 @@
-package StrategyPattern;
+package strategyPattern;
 
 public class ImageStorage {
     private Compressorable compressor;

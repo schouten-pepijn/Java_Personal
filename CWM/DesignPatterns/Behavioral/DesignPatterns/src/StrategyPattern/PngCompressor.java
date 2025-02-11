@@ -1,4 +1,4 @@
-package StrategyPattern;
+package strategyPattern;
 
 public class PngCompressor implements Compressorable {
 

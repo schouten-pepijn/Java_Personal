@@ -1,4 +1,4 @@
-package StrategyPattern.problem;
+package strategyPattern.problem;
 
 public class ImageStorage {
     private String compressor;
