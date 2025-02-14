@@ -1,7 +1,12 @@
-package mediatorPattern;
+package mediatorPattern.pureMediatorPattern;
 
 public class TextBox extends UIControl {
+    
     private String content;
+
+    public TextBox(DialogBox owner) {
+        super(owner);
+    }
 
     public String getContent() {
         return content;
@@ -9,5 +14,6 @@ public class TextBox extends UIControl {
 
     public void setContent(String content) {
         this.content = content;
+        owner.changed(this);
     } 
 }
