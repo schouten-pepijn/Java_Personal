@@ -4,7 +4,8 @@ public class App {
     public static void main(String[] args) {
         //Build processing pipeline
         // Authenticator -> Logger -> Compressor
-        var compressor = new Compressor(null);
+        var encryptor = new Encryptor(null);
+        var compressor = new Compressor(encryptor);
         var logger = new Logger(compressor);
         var authenticator = new Authenticator(logger);
 
