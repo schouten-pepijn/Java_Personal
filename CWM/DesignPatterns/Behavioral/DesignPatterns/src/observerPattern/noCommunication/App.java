@@ -1,4 +1,4 @@
-package observerPattern;
+package observerPattern.noCommunication;
 
 public class App {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package observerPattern;
+package observerPattern.noCommunication;
 
 public class SpreadSheet implements Observer {
 

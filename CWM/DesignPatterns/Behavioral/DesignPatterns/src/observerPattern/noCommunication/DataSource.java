@@ -1,4 +1,4 @@
-package observerPattern;
+package observerPattern.noCommunication;
 
 public class DataSource extends Subject {
     private int value;

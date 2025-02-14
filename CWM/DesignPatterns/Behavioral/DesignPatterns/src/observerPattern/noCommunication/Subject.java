@@ -1,4 +1,4 @@
-package observerPattern;
+package observerPattern.noCommunication;
 
 import java.util.ArrayList;
 import java.util.List;
