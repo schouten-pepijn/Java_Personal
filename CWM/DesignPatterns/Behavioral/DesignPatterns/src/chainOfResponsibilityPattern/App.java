@@ -2,14 +2,14 @@ package chainOfResponsibilityPattern;
 
 public class App {
     public static void main(String[] args) {
-        WebServer webServer = new WebServer(
-            new Authenticator(),
-            new Logger(),
-            new Compressor()
-        );
+        //Build processing pipeline
+        // Authenticator -> Logger -> Compressor
+        var compressor = new Compressor(null);
+        var logger = new Logger(compressor);
+        var authenticator = new Authenticator(logger);
 
-        webServer.handle(
-            new HttpRequest("admin", "password")
-        );
+        // Call the server
+        var server = new WebServer(authenticator);
+        server.handle(new HttpRequest("admin", "password"));
     }
 }

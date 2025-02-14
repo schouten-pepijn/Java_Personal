@@ -7,6 +7,10 @@ public class TvObserver implements Observerable {
     @Override
     public void update(float temperature) {
         this.temperature = temperature;
+        printTemperature();
+    }
+
+    private void printTemperature( ) {
         System.out.println("TV temperature is " + temperature);
     }
 }
