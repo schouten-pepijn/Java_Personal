@@ -17,6 +17,10 @@ public class App {
         Group group = new Group();
 
         group.add(group1);
+
+        group.render();
+
+        group.move();
     }
 
 }

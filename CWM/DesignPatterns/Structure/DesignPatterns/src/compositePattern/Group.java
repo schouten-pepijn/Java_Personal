@@ -3,22 +3,23 @@ package compositePattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
-    List<Object> objects = new ArrayList<>();
+public class Group implements Component {
+    List<Component> components = new ArrayList<>();
 
-    public void add(Object shape) {
-        objects.add(shape);
+    public void add(Component shape) {
+        components.add(shape);
     }
 
-    // Problem: Does not work for all nested groups
-    // Need to explicity check and cast each object
-    // Solution: Use composite design pattern
+    @Override
     public void render() {
-        for (var object : objects) {
-            if (object instanceof Shape)
-                ((Shape)object).render();
-            else
-                ((Group)object).render();
+        for (var component : components) {
+            component.render();
         }
+    }
+
+    @Override
+    public void move() {
+        for (var component : components)
+            component.move();
     }
 }
